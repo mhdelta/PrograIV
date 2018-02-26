@@ -61,10 +61,9 @@ public class Factura {
                 listaProductos.add(prod.AgregarProducto());
             } else {
                 fin = 1;
-            }
-            factura_creada.setListaProductos(listaProductos);
+            }      
         }
-
+        factura_creada.setListaProductos(listaProductos);
         System.out.println("Factura creada con exito!");
         return factura_creada;
     }
