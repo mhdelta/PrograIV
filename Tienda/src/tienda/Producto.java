@@ -5,6 +5,8 @@
  */
 package tienda;
 
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -53,19 +55,56 @@ public class Producto extends Tienda {
         this.nombre = nombre;
     }
 
-    public Producto AgregarProducto() {
+    public Producto Agregar() {
         Producto prod = new Producto();
 
         System.out.println("Ingrese el codigo del producto");
         prod.setCodigo(in.next());
-        
+
         System.out.println("Ingrese el nombre del producto");
         prod.setNombre(in.next());
-        
+
         System.out.println("Ingrese el precio del producto");
         prod.setPrecio(in.nextDouble());
-        
+
         return prod;
+    }
+
+    public ArrayList<Producto> Eliminar(String cod, ArrayList<Producto> listaProd) {
+        int i = 0;
+        int pos = -1;
+        for (Producto prod : listaProd) {
+            if (Objects.equals(prod.getCodigo(), cod)) {
+                i++;
+                pos = i;
+            }
+        }
+        if (pos != -1) {
+            listaProd.remove(pos);
+        } else {
+            System.out.println("No existe un producto con ese codigo");
+        }
+        return listaProd;
+    }
+
+    public Producto CambiarPrecio(Double precio, String cod, ArrayList<Producto> listaProd) {
+        int i = 0;
+        int pos = -1;
+        Producto NuevoProd = new Producto();
+        for (Producto prod : listaProd) {
+            if (prod.getCodigo() == cod) {
+                pos = i;
+                NuevoProd = prod;
+            }
+            System.out.println("no son iguales");
+            i++;
+        }
+        if (pos != -1) {
+            NuevoProd.precio = precio;
+        } else {
+            System.out.println("No existe un producto con ese codigo");
+        }
+        return NuevoProd;
     }
 
 }

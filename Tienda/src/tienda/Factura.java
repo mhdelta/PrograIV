@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tienda;
 
 import java.util.ArrayList;
@@ -58,10 +53,10 @@ public class Factura {
             System.out.println("Ingresar producto ? [y / n]");
             String resp = in.next();
             if (Objects.equals(resp, "y")) {
-                listaProductos.add(prod.AgregarProducto());
+                listaProductos.add(prod.Agregar());
             } else {
                 fin = 1;
-            }      
+            }
         }
         factura_creada.setListaProductos(listaProductos);
         System.out.println("Factura creada con exito!");
@@ -90,8 +85,162 @@ public class Factura {
                 fin = 1;
             }
         }
-        if(fin == 0){
+        if (fin == 0) {
             System.out.println("No existe una factura con ese codigo");
-        }  
+        }
+    }
+
+    public ArrayList<Factura> EliminarFactura(double numero, ArrayList<Factura> lista) {
+        int i = 0;
+        int pos = -1;
+        for (Factura fac : lista) {
+            if (fac.getNumero() == numero) {
+                pos = i;
+            }
+            i++;
+        }
+        if (pos != -1) {
+            lista.remove(pos);
+        } else {
+            System.out.println("No existe una factura con ese codigo");
+        }
+        return lista;
+    }
+
+    public ArrayList<Factura> AgregarNuevoProducto(double num, ArrayList<Factura> lista) {
+        Factura factura_modificada = new Factura();
+        int i = 0;
+        int pos = -1;
+        for (Factura fac : lista) {
+            if (fac.getNumero() == num) {
+                pos = i;
+                lista = fac.EliminarFactura(num, lista);
+                factura_modificada.numero = fac.numero;
+                listaProductos = fac.listaProductos;
+                listaProductos.add(prod.Agregar());
+                factura_modificada.setListaProductos(listaProductos);
+                lista.add(factura_modificada);
+            }
+            i++;
+        }
+        if (pos == -1) {
+            System.out.println("No existe una factura con ese codigo");
+        }
+
+        return lista;
+    }
+
+    public ArrayList<Factura> EliminarProducto(String cod, double num, ArrayList<Factura> lista) {
+        Factura factura_modificada = new Factura();
+        int i = 0;
+        int pos = -1;
+        for (Factura fac : lista) {
+            if (fac.getNumero() == num) {
+                pos = i;
+                lista = fac.EliminarFactura(num, lista);
+                factura_modificada.numero = fac.numero;
+                listaProductos = fac.listaProductos;
+                listaProductos = prod.Eliminar(cod, listaProductos);
+                factura_modificada.setListaProductos(listaProductos);
+                lista.add(factura_modificada);
+            }
+            i++;
+        }
+        if (pos == -1) {
+            System.out.println("No existe una factura con ese codigo");
+        }
+
+        return lista;
+    }
+
+    public ArrayList<Factura> CambiarPrecioProducto(double precio, String cod, double num, ArrayList<Factura> lista) {
+        Factura factura_modificada = new Factura();
+        Producto prod_mod = new Producto();
+        int i = 0;
+        int pos = -1;
+        int pos2 = -1;
+        for (Factura fac : lista) {
+            if (fac.getNumero() == num) {
+                pos = i;
+                factura_modificada = fac;
+                factura_modificada.setNumero(num);
+                ArrayList<Producto> listaProdsaModificar = factura_modificada.getListaProductos();
+                
+                System.out.print("listaprodsamod: ");
+                System.out.println(listaProdsaModificar);
+                
+                for (Producto p : listaProdsaModificar){
+                    System.out.println(p.getCodigo());
+                    if (Objects.equals(p.getCodigo(), cod)) {
+                        pos2 = i;
+                    }
+                    i++;
+                }
+                if (pos2 != -1) {
+                    prod_mod.setPrecio(precio);
+                    listaProdsaModificar.set(pos2, prod_mod);
+                    
+                } else {
+                    System.out.println("No existe un producto con ese codigo");
+                }
+                
+                lista.set(pos, factura_modificada);
+                System.out.println("El producto se modifico con exito");
+            }
+            i++;
+        }
+        if (pos != -1) {
+
+        } else {
+            System.out.println("No existe una factura con ese codigo");
+        }
+        
+        System.out.println(lista);
+
+        return lista;
+    }
+
+    public ArrayList<Factura> ModificarFactura(double num, ArrayList<Factura> lista) {
+        Factura factura = new Factura();
+        Scanner in = new Scanner(System.in);
+        // TODO code application logic here
+        int finM = 0;
+        while (finM == 0) {
+            System.out.println("\t\tMENU MODIFICAR FACTURA # " + num);
+            System.out.println("[1]. AGREGAR NUEVO PRODUCTO");
+            System.out.println("[2]. ELIMINAR PRODUCTO");
+            System.out.println("[3]. CAMBIAR PRECIO");
+            System.out.println("[4]. SALIR");
+            switch (in.next()) {
+                case "1":
+//                  AGREGAR NUEVO PRODUCTO
+                    System.out.println("ingrese la información del nuevo producto: ");
+                    lista = factura.AgregarNuevoProducto(num, lista);
+                    break;
+                case "2":
+//                  ELIMINAR PRODUCTO
+                    System.out.println("ingrese el codigo del producto que desea eliminar: ");
+                    String cod = in.next();
+                    factura.EliminarProducto(cod, num, lista);
+                    System.out.println("El producto fue eliminado...");
+                    break;
+                case "3":
+//                  CAMBIAR PRECIO DE UN PRODUCTO
+                    System.out.println("ingrese el codigo del producto al que desea cambiarle el precio: ");
+                    cod = in.next();
+                    System.out.println("digite el nuevo precio: ");
+                    Double precio = in.nextDouble();
+                    factura.CambiarPrecioProducto(precio, cod, num, lista);
+                    break;
+                case "4":
+                    finM = 1;
+                    System.out.println("...Saliendo de modificación...");
+                    break;
+                default:
+                    finM = 1;
+                    break;
+            }
+        }
+        return lista;
     }
 }

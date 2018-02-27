@@ -6,8 +6,6 @@
 package tienda;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -45,9 +43,11 @@ public class Tienda {
         int i = 0;
         while (finM == 0) {
             System.out.println("\t\tMENU");
-            System.out.println("[1]. FACTURAR");
+            System.out.println("[1]. CREAR FACTURA");
             System.out.println("[2]. CONSULTAR FACTURA");
-            System.out.println("[3]. SALIR");
+            System.out.println("[3]. MODIFICAR FACTURA");
+            System.out.println("[4]. ELIMINAR FACTURA");
+            System.out.println("[5]. SALIR");
             switch (in.next()) {
                 case "1":
 //                  CREAR FACTURA
@@ -61,6 +61,20 @@ public class Tienda {
                     factura.ImprimirFactura(listaFacturas);
                     break;
                 case "3":
+//                  MODIFICAR FACTURA CON EL NUMERO
+                    System.out.println("Ingrese el numero de la factura que desea modificar");
+                    double num = in.nextDouble();
+                    listaFacturas = factura.ModificarFactura(num, listaFacturas);
+                    break;
+                case "4":
+//                  ELIMINAR FACTURA CON EL NUMERO
+                    System.out.println("Ingrese el numero de la factura que desea eliminar");
+                    double resp = in.nextDouble();
+                    Factura facturaE = new Factura();
+                    listaFacturas = facturaE.EliminarFactura(resp, listaFacturas);
+                    System.out.println("la factura fue eliminada!");
+                    break;
+                case "5":
                     finM = 1;
                     System.out.println("...Saliendo de facturacion...");
                     break;
