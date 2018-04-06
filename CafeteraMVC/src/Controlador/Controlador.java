@@ -31,11 +31,17 @@ public class Controlador implements ActionListener {
         this.view.sabor2.addActionListener(this);
         this.view.sabor3.addActionListener(this);
         this.view.sabor4.addActionListener(this);
-        
+
         this.view.size1.addActionListener(this);
         this.view.size2.addActionListener(this);
         this.view.size3.addActionListener(this);
         this.view.size4.addActionListener(this);
+
+        this.view.extra1.addActionListener(this);
+        this.view.extra2.addActionListener(this);
+        this.view.extra3.addActionListener(this);
+        this.view.extra4.addActionListener(this);
+        this.view.extra5.addActionListener(this);
 
     }
 
@@ -48,6 +54,7 @@ public class Controlador implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String textoBoton = e.getActionCommand();
         String lastTwoLetters = textoBoton.substring(textoBoton.length() - 2);
+        int size = e.getActionCommand().length();
         switch (e.getActionCommand()) {
             case "Iniciar":
                 System.out.println("servir");
@@ -58,10 +65,14 @@ public class Controlador implements ActionListener {
                 System.exit(0);
                 break;
             default:
-                if(Objects.equals(lastTwoLetters,"Oz")){
+                if (Objects.equals(lastTwoLetters, "Oz")) {
                     model.setSize(e.getActionCommand());
-                }else{
+                } else if (size > 10) {
+                    System.out.println(size);
                     model.setSabor(e.getActionCommand());
+                } else if (size <= 10) {
+                    model.addExtra(e.getActionCommand());
+                    System.out.println(e.getActionCommand());
                 }
                 break;
         }
