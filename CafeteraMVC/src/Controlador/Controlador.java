@@ -24,7 +24,6 @@ public class Controlador implements ActionListener {
     public Controlador(Vista view, Modelo model) {
         this.view = view;
         this.model = model;
-
         this.view.iniciarbtn.addActionListener(this);
         this.view.cancelarbtn.addActionListener(this);
         this.view.sabor1.addActionListener(this);
