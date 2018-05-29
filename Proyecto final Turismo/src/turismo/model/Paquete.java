@@ -5,14 +5,17 @@
  */
 package turismo.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author PERSONAL
  */
 public class Paquete {
     public String fechaIni, fechaFin;
-    public String ciudadDestino, hotel, excursiones;
+    public String ciudadDestino, hotel;
     public String DNI, nombreCliente;
     public boolean extranjero, mayorista;
     public int cuotas;
+    public ArrayList<String> Excursiones;
 }

@@ -11,6 +11,12 @@ package turismo.view;
  */
 public class Principal extends javax.swing.JFrame {
 
+    public SanAndres ventanaSanAndres = new SanAndres();
+    public Cartagena ventanaCartagena = new Cartagena();
+    public EjeCafetero ventanaEje = new EjeCafetero();
+    public Guatape ventanaGuatape = new Guatape();
+    public Amazonas ventanaAmazonas = new Amazonas();
+
     /**
      * Creates new form Principal
      */
