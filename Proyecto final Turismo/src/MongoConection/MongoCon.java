@@ -9,12 +9,14 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoCredential;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 import org.bson.Document;
 
 /**
@@ -55,7 +57,7 @@ public class MongoCon {
      *
      * @param coll
      */
-    public void getAllDocuments(String coll) {
+    public List<Document> getAllDocuments(String coll) {
         // Creating a Mongo client
         MongoClient mongo = new MongoClient("localhost", 27017);
         // Creating Credentials
@@ -66,14 +68,11 @@ public class MongoCon {
         MongoCollection<Document> collection = database.getCollection(coll);
         // Getting the iterable object
         FindIterable<Document> iterDoc = collection.find();
-        int i = 1;
-        // Getting the iterator
-        Iterator it = iterDoc.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-            i++;
-        }
+
+        List<Document> documentos = (List<Document>) collection.find().into(
+                new ArrayList<Document>());
         mongo.close();
+        return documentos;
     }
 
     /**
@@ -106,10 +105,11 @@ public class MongoCon {
     }
 
     /**
-     *Update doc by clients name
-     * @param coll: collection 
-     * @param nombre 
-     * @param key:  
+     * Update doc by clients name
+     *
+     * @param coll: collection
+     * @param nombre
+     * @param key:
      * @param valor
      */
     public void updateDocument(String coll, String nombre, String key, String valor) {
@@ -121,15 +121,16 @@ public class MongoCon {
         MongoDatabase database = mongo.getDatabase("TURISMO");
         // Retrieving a collection
         MongoCollection<Document> collection = database.getCollection(coll);
-        
+
         collection.updateOne(Filters.eq("nombre", nombre), Updates.set(key, valor));
         System.out.println("Document update successfully...");
         //Close conection
         mongo.close();
     }
-    
+
     /**
-     *Deletes doc from clientes
+     * Deletes doc from clientes
+     *
      * @param nombre
      */
     public void deleteDocument(String nombre) {

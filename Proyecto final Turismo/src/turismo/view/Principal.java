@@ -5,6 +5,11 @@
  */
 package turismo.view;
 
+import MongoConection.MongoCon;
+import java.util.ArrayList;
+import java.util.List;
+import org.bson.Document;
+
 /**
  *
  * @author utp
@@ -17,11 +22,30 @@ public class Principal extends javax.swing.JFrame {
     public Guatape ventanaGuatape = new Guatape();
     public Amazonas ventanaAmazonas = new Amazonas();
 
+    public Cliente ventanaCliente = new Cliente();
+    
+    public Precio ventanaPrecio = new Precio();
+
+    public ArrayList<String> hoteles = new ArrayList<String>();
+    public ArrayList<String> ciudades_destino = new ArrayList<String>();
+
+    MongoConection.MongoCon db = new MongoCon();
+
     /**
      * Creates new form Principal
      */
     public Principal() {
         initComponents();
+
+        List<Document> hoteles = db.getAllDocuments("hoteles");
+        for (Document hotel : hoteles) {
+            this.hoteles.add(hotel.getString("nombre"));
+        }
+        
+        List<Document> ciudades = db.getAllDocuments("ciudades");
+        for (Document ciudad : ciudades) {
+            this.ciudades_destino.add(ciudad.getString("nombre"));
+        }
     }
 
     /**
@@ -275,7 +299,7 @@ public class Principal extends javax.swing.JFrame {
         sanandresBtn.setBackground(new java.awt.Color(255, 255, 255));
         sanandresBtn.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         sanandresBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/san andres.jpg"))); // NOI18N
-        sanandresBtn.setText("San Andres");
+        sanandresBtn.setText("San Andrés");
         sanandresBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         sanandresBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -13,9 +13,13 @@ import java.util.ArrayList;
  */
 public class Paquete {
     public String fechaIni, fechaFin;
-    public String ciudadDestino, hotel;
+    public String ciudadDestino, hotel, aeropuerto_destino;
     public String DNI, nombreCliente;
     public boolean extranjero, mayorista;
     public int cuotas;
     public ArrayList<String> Excursiones;
+    
+    public float costo_hotel;
+    public float costo_vuelo;
+    
 }

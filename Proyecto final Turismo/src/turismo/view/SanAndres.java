@@ -13,7 +13,6 @@ import java.util.ArrayList;
  */
 public class SanAndres extends javax.swing.JFrame {
     
-    public ArrayList<String> hoteles = new ArrayList<String>();
     public ArrayList<String> excursiones = new ArrayList<String>();
 
     /**
@@ -21,7 +20,6 @@ public class SanAndres extends javax.swing.JFrame {
      */
     public SanAndres() {
         initComponents();
-        this.hoteles.add("OnVacation San Andrés");
         this.excursiones.add("Acuario");
     }   
 
