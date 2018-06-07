@@ -53,10 +53,10 @@ public class SanAndres extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        e1 = new javax.swing.JCheckBox();
-        e2 = new javax.swing.JCheckBox();
-        e3 = new javax.swing.JCheckBox();
-        e4 = new javax.swing.JCheckBox();
+        Recorrido = new javax.swing.JCheckBox();
+        JetSki = new javax.swing.JCheckBox();
+        Acuario = new javax.swing.JCheckBox();
+        Providencia = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -273,13 +273,13 @@ public class SanAndres extends javax.swing.JFrame {
         jLabel3.setText("Excursiones");
         jLabel3.setToolTipText("Ex");
 
-        e1.setText("Vuelta a la isla");
+        Recorrido.setText("Vuelta a la isla");
 
-        e2.setText("Jet ski");
+        JetSki.setText("Jet ski");
 
-        e3.setText("Acuario");
+        Acuario.setText("Acuario");
 
-        e4.setText("Visita a providencia");
+        Providencia.setText("Visita a providencia");
 
         jLabel2.setText("Valor: 40mil");
 
@@ -310,19 +310,19 @@ public class SanAndres extends javax.swing.JFrame {
                         .addComponent(jLabel6))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(e2))
+                        .addComponent(JetSki))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(e1))
+                        .addComponent(Recorrido))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel8))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(e4))
+                        .addComponent(Providencia))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(e3)))
+                        .addComponent(Acuario)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -331,19 +331,19 @@ public class SanAndres extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(e1)
+                .addComponent(Recorrido)
                 .addGap(1, 1, 1)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(e2)
+                .addComponent(JetSki)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(e3)
+                .addComponent(Acuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
-                .addComponent(e4)
+                .addComponent(Providencia)
                 .addGap(7, 7, 7)
                 .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -431,11 +431,11 @@ public class SanAndres extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JCheckBox Acuario;
+    public javax.swing.JCheckBox JetSki;
+    public javax.swing.JCheckBox Providencia;
+    public javax.swing.JCheckBox Recorrido;
     public javax.swing.JButton confirmarPaquete;
-    public javax.swing.JCheckBox e1;
-    public javax.swing.JCheckBox e2;
-    public javax.swing.JCheckBox e3;
-    public javax.swing.JCheckBox e4;
     public javax.swing.JRadioButton h1;
     private javax.swing.ButtonGroup hotelesCartagena;
     private javax.swing.JLabel jLabel1;
@@ -459,8 +459,8 @@ public class SanAndres extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
+    public javax.swing.JRadioButton jRadioButton4;
+    public javax.swing.JRadioButton jRadioButton5;
+    public javax.swing.JRadioButton jRadioButton6;
     // End of variables declaration//GEN-END:variables
 }

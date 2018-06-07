@@ -252,6 +252,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Providencia"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
@@ -327,6 +330,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Rey del Mar"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
@@ -403,6 +409,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pescao alegre"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
@@ -465,11 +474,11 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="e2" min="-2" max="-2" attributes="0"/>
+                          <Component id="JetSki" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="e1" min="-2" max="-2" attributes="0"/>
+                          <Component id="Recorrido" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -477,11 +486,11 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="e4" min="-2" max="-2" attributes="0"/>
+                          <Component id="Providencia" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="e3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Acuario" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="36" max="32767" attributes="0"/>
@@ -494,19 +503,19 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="e1" min="-2" max="-2" attributes="0"/>
+                  <Component id="Recorrido" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Component id="e2" min="-2" max="-2" attributes="0"/>
+                  <Component id="JetSki" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="e3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Acuario" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="e4" min="-2" max="-2" attributes="0"/>
+                  <Component id="Providencia" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
@@ -524,7 +533,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Ex"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="e1">
+        <Component class="javax.swing.JCheckBox" name="Recorrido">
           <Properties>
             <Property name="text" type="java.lang.String" value="Vuelta a la isla"/>
           </Properties>
@@ -532,7 +541,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="e2">
+        <Component class="javax.swing.JCheckBox" name="JetSki">
           <Properties>
             <Property name="text" type="java.lang.String" value="Jet ski"/>
           </Properties>
@@ -540,7 +549,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="e3">
+        <Component class="javax.swing.JCheckBox" name="Acuario">
           <Properties>
             <Property name="text" type="java.lang.String" value="Acuario"/>
           </Properties>
@@ -548,7 +557,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="e4">
+        <Component class="javax.swing.JCheckBox" name="Providencia">
           <Properties>
             <Property name="text" type="java.lang.String" value="Visita a providencia"/>
           </Properties>

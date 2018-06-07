@@ -37,15 +37,18 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
 
+        System.out.println("lista de hoteles disponibles");
         List<Document> hoteles = db.getAllDocuments("hoteles");
         for (Document hotel : hoteles) {
             this.hoteles.add(hotel.getString("nombre"));
+            System.out.println(hotel.getString("nombre"));
         }
         
         List<Document> ciudades = db.getAllDocuments("ciudades");
         for (Document ciudad : ciudades) {
             this.ciudades_destino.add(ciudad.getString("nombre"));
         }
+        
     }
 
     /**

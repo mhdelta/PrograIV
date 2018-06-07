@@ -40,10 +40,10 @@ public class Amazonas extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        islaMicos = new javax.swing.JCheckBox();
+        Comunidades = new javax.swing.JCheckBox();
+        Caminata = new javax.swing.JCheckBox();
+        Canopi = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -59,7 +59,7 @@ public class Amazonas extends javax.swing.JFrame {
 
         hotelesCartagena.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jRadioButton1.setText("Decameron");
+        jRadioButton1.setText("Decameron Amazonas");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel5.setText("Costo por noche: 200 mil");
@@ -98,7 +98,7 @@ public class Amazonas extends javax.swing.JFrame {
 
         hotelesCartagena.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jRadioButton4.setText("On Vacation");
+        jRadioButton4.setText("On Vacation Amazonas");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setText("Costo por noche: 125 mil");
@@ -168,13 +168,13 @@ public class Amazonas extends javax.swing.JFrame {
         jLabel3.setText("Excursiones");
         jLabel3.setToolTipText("Ex");
 
-        jCheckBox1.setText("Isla de los micos");
+        islaMicos.setText("Isla de los micos");
 
-        jCheckBox2.setText("Visita comunidades indigenas");
+        Comunidades.setText("Visita comunidades indigenas");
 
-        jCheckBox3.setText("Caminata nocturna");
+        Caminata.setText("Caminata nocturna");
 
-        jCheckBox4.setText("Canopi");
+        Canopi.setText("Canopi");
 
         jLabel2.setText("Valor: 80mil");
 
@@ -193,10 +193,10 @@ public class Amazonas extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox3)
+                            .addComponent(Caminata)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel3)
-                                .addComponent(jCheckBox1))
+                                .addComponent(islaMicos))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
                                 .addComponent(jLabel4))))
@@ -205,7 +205,7 @@ public class Amazonas extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jCheckBox4))
+                        .addComponent(Canopi))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addComponent(jLabel8))
@@ -214,7 +214,7 @@ public class Amazonas extends javax.swing.JFrame {
                         .addComponent(jLabel6))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jCheckBox2)))
+                        .addComponent(Comunidades)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -223,19 +223,19 @@ public class Amazonas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox1)
+                .addComponent(islaMicos)
                 .addGap(1, 1, 1)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox2)
+                .addComponent(Comunidades)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox3)
+                .addComponent(Caminata)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox4)
+                .addComponent(Canopi)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -323,12 +323,12 @@ public class Amazonas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JCheckBox Caminata;
+    public javax.swing.JCheckBox Canopi;
+    public javax.swing.JCheckBox Comunidades;
     public javax.swing.JButton confirmarPaquete;
     private javax.swing.ButtonGroup hotelesCartagena;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
+    public javax.swing.JCheckBox islaMicos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -344,7 +344,7 @@ public class Amazonas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton4;
+    public javax.swing.JRadioButton jRadioButton1;
+    public javax.swing.JRadioButton jRadioButton4;
     // End of variables declaration//GEN-END:variables
 }

@@ -48,10 +48,10 @@ public class EjeCafetero extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
+        ParqueCafe = new javax.swing.JCheckBox();
+        Termales = new javax.swing.JCheckBox();
+        Salento = new javax.swing.JCheckBox();
+        Arrieros = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -266,13 +266,13 @@ public class EjeCafetero extends javax.swing.JFrame {
         jLabel3.setText("Excursiones");
         jLabel3.setToolTipText("Ex");
 
-        jCheckBox1.setText("Parque del cafe");
+        ParqueCafe.setText("Parque del cafe");
 
-        jCheckBox2.setText("Termales ");
+        Termales.setText("Termales ");
 
-        jCheckBox3.setText("Salento");
+        Salento.setText("Salento");
 
-        jCheckBox4.setText("Parque los arrieros");
+        Arrieros.setText("Parque los arrieros");
 
         jLabel2.setText("Valor: 80mil");
 
@@ -291,10 +291,10 @@ public class EjeCafetero extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox3)
+                            .addComponent(Salento)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabel3)
-                                .addComponent(jCheckBox1))
+                                .addComponent(ParqueCafe))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
                                 .addComponent(jLabel4))))
@@ -303,7 +303,7 @@ public class EjeCafetero extends javax.swing.JFrame {
                         .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jCheckBox4))
+                        .addComponent(Arrieros))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addComponent(jLabel8))
@@ -312,7 +312,7 @@ public class EjeCafetero extends javax.swing.JFrame {
                         .addComponent(jLabel6))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jCheckBox2)))
+                        .addComponent(Termales)))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -321,19 +321,19 @@ public class EjeCafetero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox1)
+                .addComponent(ParqueCafe)
                 .addGap(1, 1, 1)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox2)
+                .addComponent(Termales)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox3)
+                .addComponent(Salento)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox4)
+                .addComponent(Arrieros)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addContainerGap(25, Short.MAX_VALUE))
@@ -417,12 +417,12 @@ public class EjeCafetero extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JCheckBox Arrieros;
+    public javax.swing.JCheckBox ParqueCafe;
+    public javax.swing.JCheckBox Salento;
+    public javax.swing.JCheckBox Termales;
     public javax.swing.JButton confirmarPaquete;
     private javax.swing.ButtonGroup hotelesCartagena;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -444,9 +444,9 @@ public class EjeCafetero extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
+    public javax.swing.JRadioButton jRadioButton1;
+    public javax.swing.JRadioButton jRadioButton4;
+    public javax.swing.JRadioButton jRadioButton5;
+    public javax.swing.JRadioButton jRadioButton6;
     // End of variables declaration//GEN-END:variables
 }
